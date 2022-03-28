@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+/* ======================================================
+  全体
+========================================================*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "MS Pゴシック", sans-serif;
+  color      : #383e45;
+  font-size  : 1.4rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+
+h1 {
+  font-size: 4.0rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  margin-bottom: 100px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.6rem;
+}
+
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor         : pointer;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  width : 100%;
+  height: 100%;
+}
+
+section {
+  text-align: center;
+}
+/* 共通＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.wrapper {
+  max-width: 960px;
+  padding: 4%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* メニューボタン */
+.menu-btn {
+  width: 60px;
+  height: 40px;
+  border: 1px solid #383e45;
+  background-color: #383e45;
+  color: #fff;
+  border-radius: 3px;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menu-btn-line::before {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  transition: all 1s ease;
+}
+
+.menu-btn-line::after {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  right: 20%;
+  bottom: 30%;
+  transition: all 1s ease;
+}
+
+.open .menu-btn-line::before {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.open .menu-btn-line::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+#mask {
+  display: none;
+}
+
+.open #mask {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: dimgrey;
+  position: fixed;
+  top:0;
+  left:0;
+  cursor: pointer;
+}
+/* header =============================================*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #fff;
+}
+
+#header.flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.global-nav {
+  padding: 3%;
+  position: fixed;
+  top: 0;
+  left:-100px;
+  z-index: 10;
+  color: #fff;
+  font-size: 2rem;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.open .global-nav {
+  left:0;
+  opacity:1;
+}
+
+.global-nav ul li a {
+  margin-right: 20px;
+}
+/* main=============================================== */
+#keyvisual {
+  max-width: 100vw;
+  height: 600px;
+}
+
+#keyvisual img {
+  object-fit: cover;
+}
+
+/* about */
+.about-container.flex {
+  justify-content: center;
+}
+
+.profile-img {
+  width: 20%;
+  padding: 1%;
+}
+
+.profile-img img {
+  border-radius: 50%;
+}
+
+.profile-content {
+  width: 40%;
+  padding: 1%;
+  text-align: left;
+}
+
+/* My Cactus */
+.my-cactus-container.flex {
+  justify-content: space-between;
+}
+
+.item {
+  width: 33%;
+  margin-bottom: 100px;
+}
+
+.item img {
+  height: 180px;
+  object-fit: cover;
+  padding: 1%;
+}
+/* footer============================================== */
+#footer {
+  text-align: center;
+}

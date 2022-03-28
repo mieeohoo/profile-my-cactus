@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 3.6rem;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  /* about */
+  .about-container.flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-img {
+    text-align: center;
+  }
+
+  .profile-content {
+    width: 100%;
+  }
+  /* my-cactus */
+  .my-cactus-container.flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item  {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
